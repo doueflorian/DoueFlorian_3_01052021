@@ -1,0 +1,33 @@
+img{
+    width: 10em;
+    height: auto;
+}
+
+strong {
+    font-weight: inherit;
+}
+
+em {
+    font-weight: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input[type=radio]{
+display: none;
+}
+
+input[type=radio]:checked + label i {
+ color: black;
+ }
+
+ input[type=submit]{
+    pointer-events: none;
+}
