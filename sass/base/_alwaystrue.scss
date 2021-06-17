@@ -1,0 +1,23 @@
+strong {
+    font-weight: inherit;
+}
+
+em {
+    font-weight: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-primary;
+
+}

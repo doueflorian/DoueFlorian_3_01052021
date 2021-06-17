@@ -1,0 +1,12 @@
+input[type=radio]{
+    display: none;
+    }
+    
+input[type=radio]:checked + label i {
+     color: black;
+}
+    
+input[type=submit]{
+        pointer-events: none;
+}
+
