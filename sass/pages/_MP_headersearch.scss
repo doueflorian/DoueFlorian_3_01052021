@@ -8,6 +8,7 @@
         background-color: transparent;
         border: none;
         width: 12em;
+        
     }
 
     input::placeholder {
@@ -19,6 +20,7 @@
     input:focus {
         outline: none;
     }
+    
 
     @media (min-width: 1024px) {
         background-color: white;
@@ -35,6 +37,12 @@
     background-color: rgba($element-back-color, 0.3);
     padding: 2em 0em;
     text-align: center;
+
+    @media (min-width: 1024px) {
+        box-shadow: inset 0px 6px 5px -5px rgba($shadow-color, 0.5) ;
+
+    }
+
 
     
     h1, p {
@@ -53,15 +61,7 @@
     }
 
     &__button {
-        width: 220px;
-        height: 50px;
-        font-size: 1em;
-        border: none;
-        border-radius: 2em;
-        box-shadow: 2px 2px 5px rgba($shadow-color, 0.5) ;
-        color: white;
-        background: linear-gradient(-20deg, $color-primary, $color-secondary);
-        cursor: pointer;
+        @include clic-button
     }
 
 

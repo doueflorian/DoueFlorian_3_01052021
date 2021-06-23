@@ -1,12 +1,105 @@
+.menu{
+    
+    form {
+    margin-bottom: 0;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    column-gap: 1em;
+    }
+
+}
+
+.menu__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 1em;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+    flex: 0 0 30%;
+    }
+
+
+}
+
+.item__card{
+    @include menu-button;
+
+    &-txt{
+        line-height: 1.5em;
+        flex: 0 1 100%;
+        align-self: center;
+        padding-left: 1em;
+        white-space: nowrap;
+        overflow: hidden;      
+          
+    }
+    
+        &-txt h3, &-txt p{
+        padding: 0;
+        margin: 0;
+        font-size: 1em;   
+        text-overflow: ellipsis;
+                           
+    }
+
+    &-price{
+        font-weight: bold;
+        padding: 0 1em 0.5em; 
+    }
+
+    &-check{
+        transform: translateX(4.2em);
+        transition-duration: 0.5s;
+        color: white;
+        border-radius: 0 1em 1em 0 ;
+        border: none;
+        background-color: $color-tertiary;     
+}
+
+    &-check i{
+        font-size: 1.5em;
+    }
+
+    span{
+        align-self: flex-end;
+    }
+
+}
+
+
 input[type=radio]{
     display: none;
     }
     
-input[type=radio]:checked + label i {
-     color: black;
+input[type=radio]:hover + label button, input[type=radio]:checked + label button {
+    flex: 1 0 15%;
+    max-width: 60px;
+    transform: translateX(0.2px);
+    transition-duration: 0.5s;
+}
+
+
+input[type=radio]:hover + label i {
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+
 }
     
 input[type=submit]{
         pointer-events: none;
 }
 
+
+.orderbutton {
+    margin: 4em auto 2.5em;
+
+
+    @include clic-button;
+
+}

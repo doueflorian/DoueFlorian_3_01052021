@@ -132,6 +132,13 @@ body {
   text-align: center;
 }
 
+@media (min-width: 1024px) {
+  .header-search {
+    -webkit-box-shadow: inset 0px 6px 5px -5px rgba(59, 59, 59, 0.5);
+            box-shadow: inset 0px 6px 5px -5px rgba(59, 59, 59, 0.5);
+  }
+}
+
 .header-search h1, .header-search p {
   margin-top: 0;
 }
@@ -168,6 +175,12 @@ body {
 .main-page__rules h2 {
   font-weight: bolder;
   margin: 1.2em 0 1.2em 0;
+}
+
+@media (min-width: 1024px) {
+  .main-page__rules h2 {
+    text-align: center;
+  }
 }
 
 .main-page__rules ul {
@@ -256,8 +269,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 1em;
-          column-gap: 1em;
+  -webkit-column-gap: 1%;
+          column-gap: 1%;
   row-gap: 1em;
   width: 90%;
   margin: auto;
@@ -278,6 +291,12 @@ body {
   width: 100%;
   height: 250px;
   border-radius: 1em;
+}
+
+@media (min-width: 1024px) {
+  .place__card {
+    width: 24%;
+  }
 }
 
 .place__card img {
@@ -314,16 +333,29 @@ body {
   margin: 0.2em;
 }
 
-.place__card div > i {
+.place__card div > .fa-heart {
   font-size: 1.5em;
   position: absolute;
   right: 1em;
   top: 1em;
 }
 
-.place__card div > i:hover {
-  color: linear-gradient(-20deg, #9356DC, #FF79DA);
-  display: none;
+.place__card div > .fa-heart-color {
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.place__card div > .fa-heart-color:hover {
+  opacity: 100;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.place__card div > .fa-heart-color:hover .fa-heart-nude {
+  opacity: 0;
 }
 
 .top-menu {
@@ -342,9 +374,34 @@ body {
   max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 65%;
-     object-position: 50% 65%;
   margin: auto;
+}
+
+.top-menu img[alt="la note enchantee"] {
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
+}
+
+@media (min-width: 1024px) {
+  .top-menu img {
+    position: static;
+  }
+  .top-menu img[alt="la palette du gout"] {
+    -o-object-position: 50% 58%;
+       object-position: 50% 58%;
+  }
+  .top-menu img[alt="la note enchantee"] {
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .top-menu img[alt="a la francaise"] {
+    -o-object-position: 50% 53%;
+       object-position: 50% 53%;
+  }
+  .top-menu img[alt="le delice des sens"] {
+    -o-object-position: 50% 65%;
+       object-position: 50% 65%;
+  }
 }
 
 .top-menu__name {
@@ -359,30 +416,46 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   background-color: #f6f6f6;
   border-radius: 2em 2em 0 0;
   margin-top: -3em;
 }
 
-form {
+@media (min-width: 1024px) {
+  .top-menu__name {
+    width: 90%;
+    max-width: 1500px;
+    margin: -3em auto 0;
+  }
+}
+
+.top-menu h1 {
   margin-bottom: 0;
-  padding-bottom: 1em;
+}
+
+.top-menu .fa-heart {
+  font-size: 1.5em;
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0 5%;
   background-color: #f6f6f6;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 0;
+  }
 }
 
 .menu h2 {
-  margin-top: 0;
+  margin-top: 1em;
   padding-top: 1em;
   font-size: 1em;
   font-weight: 100;
@@ -402,20 +475,144 @@ form {
   border-bottom: 3px solid #99E2D0;
 }
 
-.orderbutton {
-  margin: 2em auto 5rem;
+.menu form {
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+}
+
+.menu__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1em;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .menu__cards {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+}
+
+.item__card {
+  background-color: white;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 5px 5px rgba(59, 59, 59, 0.2);
+          box-shadow: 0px 5px 5px rgba(59, 59, 59, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  height: 60px;
+  width: 100%;
+}
+
+.item__card-txt {
+  line-height: 1.5em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.item__card-txt h3, .item__card-txt p {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  text-overflow: ellipsis;
+}
+
+.item__card-price {
+  font-weight: bold;
+  padding: 0 1em 0.5em;
+}
+
+.item__card-check {
+  -webkit-transform: translateX(4.2em);
+          transform: translateX(4.2em);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  color: white;
+  border-radius: 0 1em 1em 0;
+  border: none;
+  background-color: #99E2D0;
+}
+
+.item__card-check i {
+  font-size: 1.5em;
+}
+
+.item__card span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 input[type=radio] {
   display: none;
 }
 
-input[type=radio]:checked + label i {
-  color: black;
+input[type=radio]:hover + label button, input[type=radio]:checked + label button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 15%;
+          flex: 1 0 15%;
+  max-width: 60px;
+  -webkit-transform: translateX(0.2px);
+          transform: translateX(0.2px);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+input[type=radio]:hover + label i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 input[type=submit] {
   pointer-events: none;
+}
+
+.orderbutton {
+  margin: 4em auto 2.5em;
+  width: 220px;
+  height: 50px;
+  font-size: 1em;
+  border: none;
+  border-radius: 2em;
+  -webkit-box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.5);
+          box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.5);
+  color: white;
+  background: linear-gradient(-20deg, #9356DC, #FF79DA);
+  cursor: pointer;
 }
 
 .footer-logo {
@@ -429,12 +626,13 @@ footer {
   background-color: #373737;
   padding: 1.5em;
   color: white;
-  line-height: 1.5em;
+  line-height: 1.8em;
 }
 
 footer i {
   font-size: 0.7em;
   color: white;
+  width: 1.5em;
 }
 
 footer a {

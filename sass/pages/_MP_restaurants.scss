@@ -4,7 +4,7 @@
     margin-top: 3em;
     display: flex;
     flex-direction: column;
-    
+
     h2 {
         padding-left: 5%;
     }
@@ -12,7 +12,7 @@
 
     &-cards {
         display: flex;
-        column-gap: 1em;
+        column-gap: 1%;
         row-gap: 1em;
         width: 90%;
         margin: auto;      
@@ -29,6 +29,10 @@
     width: 100%;
     height: 250px;
     border-radius: 1em;
+
+    @media (min-width: 1024px) {
+    width: 24%;
+    }
     
     
     img {
@@ -53,16 +57,35 @@
         margin: 0.2em;
     }
 
-    div > i {
+    div > .fa-heart {
         font-size: 1.5em;
         position: absolute;
         right: 1em;
         top: 1em;
 
-        &:hover {
-            color: linear-gradient(-20deg, $color-primary, $color-secondary);
-            display: none;
-        }
-    }
+        &-color{
+            opacity: 0;
+            background: linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;       
+            
+            &:hover
+            {
+                opacity: 100;
+                transition-duration: 0.5s;
 
+                .fa-heart-nude
+                {
+                    opacity: 0;
+                }
+            }
+        }
+
+
+
+        
+ 
+    }
 }
+
+

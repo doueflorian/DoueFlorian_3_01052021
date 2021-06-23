@@ -3,11 +3,14 @@
     max-width: 1200px;
     margin: auto;
 
-
-
     h2 {
         font-weight: bolder;
         margin: 1.2em 0 1.2em 0 ;
+
+        @media (min-width: 1024px) {
+            text-align: center;
+
+        }
     }
 
     ul {
@@ -29,6 +32,7 @@
         &:nth-child(3) {
             background-color: rgba($color-primary, 0.15);
         }
+
     }
 
     i {

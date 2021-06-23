@@ -7,33 +7,83 @@
         width: 100%;
         max-height: 300px;
         object-fit: cover;
-        object-position: 50% 65%;
         margin: auto;
     }
+
+    img[alt="la note enchantee"]{
+        object-position: 50% 40%;
+    }
+
+    @media (min-width: 1024px) {
+
+        img{
+            position: static;
+        }
+        img[alt="la palette du gout"]{
+            object-position: 50% 58%;
+        }
+
+        img[alt="la note enchantee"]{
+            object-position: 50% 50%;
+        }
+
+        img[alt="a la francaise"]{
+            object-position: 50% 53%;
+        }
+
+        img[alt="le delice des sens"]{
+            object-position: 50% 65%;
+        }
+    }
+   
 
     &__name {
         display: flex;
         @include flexcenter;
+        align-items: baseline;
         background-color: $restaurants-back-color;
         border-radius: 2em 2em 0 0;
         margin-top: -3em;
+
+        @media (min-width: 1024px) {
+            width: 90%;
+            max-width: 1500px;
+            margin: -3em auto 0;
+        }
+
+        
     }
 
-}
+    h1{
+        margin-bottom: 0;
+    }
+    
+    .fa-heart{
+        font-size: 1.5em;
+    }
 
-form {
-    margin-bottom: 0;
-    padding-bottom: 1em;
+
+
+
+
+
 }
 
 .menu {
-    display: flex;
-    flex-direction: row;
-    padding: 0 5%;
+
+    @media (min-width: 1024px) {
+        width: 90%;
+        max-width: 1500px;
+        margin: auto;
+        padding: 0;
+    }
+
+
     background-color: $restaurants-back-color;
+    position: relative;
 
     h2 {
-        margin-top: 0;
+        margin-top: 1em;
         padding-top: 1em;
         font-size: 1em;
         font-weight: 100;
@@ -52,11 +102,5 @@ form {
         width   : 40px;
         border-bottom: 3px solid $color-tertiary;
       }
-}
 
-.orderbutton {
-    margin: 2em auto 5rem ;
-
-    
-   
 }
