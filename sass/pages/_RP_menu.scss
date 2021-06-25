@@ -1,30 +1,55 @@
 .menu{
+
+    &-flex{
+        margin-bottom: 0;
+        padding-bottom: 1.5em;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        column-gap: 1em;
+    }
+
+    &__cards{
+        width: 100%;
+        
+        @media (min-width: 1024px) {
+            flex: 0 0 30%;
+        }      
+    }
+
+
+    &__cards-list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        row-gap: 1em;
+        width: 100%; 
+        padding-top: 1em;   
+
+        opacity: 0;
+        transform-origin: bottom;
+        animation: animenu 600ms ease-in-out forwards;
+        @for $i from 1 through 10 {
+        &-#{$i} {
+            animation-delay: 200ms * $i;
+        }
+    }
+    }
+
+    &__order{
+        display: flex;
+        @include flexcenter;     
+        padding: 2.5em 0 ;  
+
+
+        &-button{
+            @include clic-button;
+        }
+
+    }
     
-    form {
-    margin-bottom: 0;
-    padding-bottom: 1.5em;
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: auto;
-    justify-content: space-between;
-    column-gap: 1em;
-    }
-
-}
-
-.menu__cards {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    row-gap: 1em;
-    width: 100%;
-
-    @media (min-width: 1024px) {
-    flex: 0 0 30%;
-    }
-
-
 }
 
 .item__card{
@@ -35,17 +60,16 @@
         flex: 0 1 100%;
         align-self: center;
         padding-left: 1em;
-        white-space: nowrap;
-        overflow: hidden;      
-          
+        overflow: hidden;       
     }
     
-        &-txt h3, &-txt p{
+    &-txt h3, &-txt p{
         padding: 0;
         margin: 0;
-        font-size: 1em;   
-        text-overflow: ellipsis;
-                           
+        font-size: 1em;  
+        white-space: nowrap;
+        overflow: hidden; 
+        text-overflow: ellipsis;         
     }
 
     &-price{
@@ -55,51 +79,36 @@
 
     &-check{
         transform: translateX(4.2em);
-        transition-duration: 0.5s;
+        transition: all 0.4s;
         color: white;
         border-radius: 0 1em 1em 0 ;
         border: none;
-        background-color: $color-tertiary;     
-}
+        background-color: $color-tertiary;    
+    }
+
+    &:hover{
+    
+        .item__card-check{
+        flex: 1 0 15%;
+        max-width: 60px;
+        transform: translateX(0.2px);
+        }
+
+        i{
+            transform: rotate(1turn);
+        }
+        
+    }
 
     &-check i{
         font-size: 1.5em;
+        transition: all 0.5s;
     }
 
     span{
         align-self: flex-end;
     }
 
-}
 
-
-input[type=radio]{
-    display: none;
-    }
-    
-input[type=radio]:hover + label button, input[type=radio]:checked + label button {
-    flex: 1 0 15%;
-    max-width: 60px;
-    transform: translateX(0.2px);
-    transition-duration: 0.5s;
-}
-
-
-input[type=radio]:hover + label i {
-    transform: rotate(360deg);
-    transition-duration: 0.5s;
-
-}
-    
-input[type=submit]{
-        pointer-events: none;
-}
-
-
-.orderbutton {
-    margin: 4em auto 2.5em;
-
-
-    @include clic-button;
 
 }

@@ -1,91 +1,78 @@
-.main-page__places {
-    background-color: rgba($element-back-color, 0.3);
+.main-page__places{
+    background-color: $element-back-color;
     padding: 2em 0em;
     margin-top: 3em;
     display: flex;
     flex-direction: column;
 
-    h2 {
-        padding-left: 5%;
-    }
-    
+    h2{
+        padding-left: 5vw;
+    }    
 
-    &-cards {
+    &-cards{
         display: flex;
-        column-gap: 1%;
-        row-gap: 1em;
+        column-gap: 1vw;
+        row-gap: 2.2vh;
         width: 90%;
         margin: auto;      
-        flex-wrap: wrap;  
+        flex-wrap: wrap;          
     }
-
 }
 
-.place__card {
-    background-color: white;
+.place__card{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    
+    @media (min-width: 1024px){
+        width: 24%;
+    }
+
+    &:nth-child(-n + 2){
+
+        &::after{
+            @include new-card;
+        }
+    }
+
+
+    &-link{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 100%;
-    height: 250px;
+    height: 100%;
     border-radius: 1em;
+    @include card-color;    
+           
+        img{
+        min-height: 0;
+        flex: 0 1 70%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 60%;               
+        }
 
-    @media (min-width: 1024px) {
-    width: 24%;
-    }
-    
-    
-    img {
-       min-height: 0;
-       flex: 0 1 70%;
-       width: 100%;
-       object-fit: cover;
-       object-position: 50% 60%;
-               
-    }
+        div{
+            flex: 1 0 30%;
+            padding-left: 1em;    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
 
-    div {
-        flex: 1 0 30%;
-        padding-left: 1em;    
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    div > h3, div > p  {
-        margin: 0.2em;
+        div > h3, div > p{
+            margin: 0.2em;
+        }
     }
 
-    div > .fa-heart {
+    &-heart{
         font-size: 1.5em;
         position: absolute;
         right: 1em;
-        top: 1em;
-
-        &-color{
-            opacity: 0;
-            background: linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;       
+        bottom: 1em;
             
-            &:hover
-            {
-                opacity: 100;
-                transition-duration: 0.5s;
-
-                .fa-heart-nude
-                {
-                    opacity: 0;
-                }
-            }
-        }
-
-
-
-        
- 
+            
+        @include filling-heart
     }
 }
-
-

@@ -1,39 +1,35 @@
-.header-top {
+.header-top{
     display: grid;
     grid-template-areas: "back logo none" ;
     grid-template-rows: 4em;            
     grid-template-columns: 1fr 5fr 1fr;
     justify-items: center;
+    align-items: center;
     position: relative;
 
-    &__logo {
+    &__logo{
+        grid-area: logo;
         height: 1.6em;
         width: auto;
-        grid-area: logo;
         width: 100%;
-        align-self: center;   
     }
     
-
-    a {
-        grid-area: back;
-        align-self: center;                       
+    &__back-arrow{
+        grid-area: back;                      
     }      
     
-   @media (min-width: 1024px) {
-    grid-template-rows: 5em;  
-    grid-template-columns: 1fr 1fr 5fr;
+    @media (min-width: 1024px) {
+        grid-template-rows: 5em;  
+        grid-template-columns: 1fr 1fr 5fr;
 
-    &__logo {
-        height: 2em;
-        width: auto;
-    } 
+        &__logo{
+            height: 2em;
+            width: auto;
+        } 
 
+    }
 }
 
-}
-
-.loc-search-submit
-{
+.loc-search-submit{
     display: none;
 }

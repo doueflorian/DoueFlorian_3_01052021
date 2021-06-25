@@ -9,6 +9,13 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-$element-back-color: rgba($color: lightgrey, $alpha: 0.5);
+$footer-color: rgb(55, 55, 55);
+
+$element-back-color: rgba(211,211,211, 0.3);
 $restaurants-back-color: rgba( 246, 246, 246, 1);
+$card-background-color: rgba( 248, 248, 248, 1);
 $shadow-color: rgb(59, 59, 59);
+
+$box-shadow-top: 0px 6px 5px -5px rgba($shadow-color, 0.5);
+$box-shadow-card: 0px 5px 5px rgba($shadow-color, 0.2);
+$box-shadow-card-dark: 0px 5px 5px rgba($shadow-color, 0.5);

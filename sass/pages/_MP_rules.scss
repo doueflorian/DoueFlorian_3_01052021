@@ -1,50 +1,49 @@
-.main-page__rules {
+.main-page__rules{
     width: 90%;
     max-width: 1200px;
     margin: auto;
 
-    h2 {
-        font-weight: bolder;
-        margin: 1.2em 0 1.2em 0 ;
+    h2{
+        margin: 1.2em 0;
 
-        @media (min-width: 1024px) {
+
+        @media (min-width: 768px){
             text-align: center;
-
+            padding-left: unset;
         }
     }
 
-    ul {
-
-        margin: auto;
+    ul{
         padding: 0 0 0 0.5em;
         display: flex;
         flex-wrap: wrap;
         column-gap: 1.5em;
         row-gap: 0.5em;
-        justify-content: space-evenly;
-          
+        justify-content: space-evenly; 
+        
+
     }
 
-    li {
+    li{
         @include rules-button;
         position: relative;
 
-        &:nth-child(3) {
+        &:nth-child(3){
             background-color: rgba($color-primary, 0.15);
         }
 
     }
 
-    i {
+    i{
         color: grey;
         font-size: 1.3em;
     }
 
-    .fa-store {
+    .fa-store{
         color: rgba($color-primary, 1);
     }
 
-    button {
+    button{
         border: none;
         width: 25px;
         height: 25px;
@@ -52,9 +51,6 @@
         background-color: $color-primary;
         border-radius: 100%;
         position: absolute;
-        left: -1em;
-        
+        left: -1em;        
     }
-
-
 }

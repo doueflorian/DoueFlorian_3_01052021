@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@
 
                <a href="../index.html" class="header-top__back-arrow" ><i class="fas fa-arrow-left"></i></a>
 
-               <img src="../public/img/logo/ohmyfood@2x.svg" alt="Oh My Food logo" class="header-top__logo" />
+               <a href="../index.html"><img src="../public/img/logo/ohmyfood@2x.svg" alt="Oh My Food logo" class="header-top__logo" /></a>
             </div>   
 
 
@@ -32,15 +33,16 @@
         </section>
 
         <section class="menu">
+             
+            <div class="menu-flex">
 
-            <form  method="post" action="none" >
+                <div class="menu__cards">
 
-            <div class="menu__cards">
+                    <h2> Entrées </h2>
 
-                <h2> Entrées </h2>
+                    <div class="menu__cards-list menu__cards-list-1">
                     
-                        <input name="entrees" type="radio" id="entrees1">
-                            <label for="entrees1" class="item__card">
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Tartare de thon </h3>
                                     <p> Assaisonné au yuzu  </p>
@@ -50,10 +52,9 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>                                
+                            </div>                                
 
-                        <input name="entrees" type="radio" id="entrees2">
-                            <label for="entrees2" class="item__card">
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Bouchée de homard croustillant  </h3>
                                     <p> Et sa farandole de petits légumes </p>
@@ -63,10 +64,9 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>                                 
+                            </div>                                 
 
-                        <input name="entrees" type="radio" id="entrees3">
-                            <label for="entrees3" class="item__card">
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Velouté de cèpes </h3>
                                     <p> Aux truffes </p>
@@ -76,17 +76,20 @@
                                     
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>
+                            </div>
+
+                    </div>
                           
 
-            </div>    
+                </div>    
 
-            <div class="menu__cards">
+                <div class="menu__cards">
 
-                <h2> Plats </h2>
-                    
-                        <input name="plats" type="radio" id="plat1">
-                            <label for="plat1" class="item__card">
+                    <h2> Plats </h2>
+
+                    <div class="menu__cards-list menu__cards-list-2">
+ 
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Poulet rôti aux herbes de Provence  </h3>
                                     <p> Et sa crème de truffe </p>
@@ -96,10 +99,9 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>                                
+                            </div>                                
 
-                        <input name="plats" type="radio" id="plat2">
-                            <label for="plat2" class="item__card">
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Langouste rôtie  </h3>
                                     <p> Et ses légumes de saison </p>
@@ -109,10 +111,9 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>                                 
+                            </div>                                 
 
-                        <input name="plats" type="radio" id="plat3">
-                            <label for="plat3" class="item__card">
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Côte de boeuf Angus  </h3>
                                     <p> Et sa purée de panais </p>
@@ -122,16 +123,19 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>
+                            </div>
 
-            </div>             
+                    </div>
+
+                </div>             
             
-            <div class="menu__cards">
+                <div class="menu__cards">
 
-                <h2> Desserts </h2>
-                    
-                        <input name="desserts" type="radio" id="dessert1">
-                            <label for="dessert1" class="item__card">
+                    <h2> Desserts </h2>
+
+                    <div class="menu__cards-list menu__cards-list-3">
+
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Farandole de desserts </h3>
                                     <p> Du chef </p>
@@ -141,10 +145,9 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>                                
+                            </div>                                
 
-                        <input name="desserts" type="radio" id="dessert2">
-                            <label for="dessert2" class="item__card">
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Crème brulée  </h3>
                                     <p> Revisitée </p>
@@ -154,10 +157,9 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>                                 
+                            </div>                                 
 
-                        <input name="desserts" type="radio" id="dessert3">
-                            <label for="dessert3" class="item__card">
+                            <div class="item__card">
                                 <div class="item__card-txt">
                                     <h3> Tiramisu </h3>
                                     <p> À la noisette </p>
@@ -167,13 +169,17 @@
 
                                     <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
 
-                            </label>
+                            </div>
 
-            </div>     
+                    </div>
 
-            <input type="submit" value="Commander" class="orderbutton" />
+                </div>     
 
-            </form>
+            </div>    
+
+            <div class="menu__order">
+                <button class="menu__order-button" disabled> Commander </button>
+            </div>
 
         </section>
 

@@ -20,3 +20,68 @@ body {
     padding: 0;
     font-family: $font-primary;
 }
+
+.loader-anim{
+    animation: loader 3s forwards ease-in-out 2s;
+    
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $restaurants-back-color;
+    @include flexcenter;
+    
+
+    z-index: 5;
+
+
+
+    &__border{
+
+        display: flex;
+        @include flexcenter;
+        
+        position: relative;
+    
+        background: white;
+        background-clip: padding-box;
+        border: solid -10px transparent;
+        border-radius: 100%;
+        width: 280px;
+        height: 280px;
+
+        
+
+      
+        &:before {
+            animation: bordercolor 3s infinite forwards ease-out;
+
+            
+            content: '';
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -10px;
+            border-radius: inherit;
+            background: linear-gradient(180deg, $color-primary,$color-secondary, white) ; 
+        }
+    }
+
+
+    &__logo{
+
+        font-family: $font-secondary;
+        font-size: 2.8em;    
+        user-select: none;    
+
+        padding: 0.5em;
+        
+        background: linear-gradient(180deg, $color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        
+
+    }
+}

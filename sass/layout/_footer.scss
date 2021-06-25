@@ -4,37 +4,33 @@
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(149deg) brightness(105%) contrast(107%);
 }
 
-footer {
-    background-color: rgb(55, 55, 55);
+footer{
+    background-color:$footer-color;
     padding: 1.5em;
-    color: white;
     line-height: 1.8em;
 
-    i {
+    i{
         font-size: 0.7em;
-        color: white;
         width: 1.5em;
-
     }
 
-    a {
+    a, i{
         color: white;
-     }
+    }
 
     @media (min-width: 1024px) {
         padding-left: 5%;
     }
 }
 
-.footer__links {
+.footer__links{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     column-gap: 1em;
     padding-left: 0;
 
-
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px){
         flex-direction: row;
     }
 }

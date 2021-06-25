@@ -1,9 +1,9 @@
-.top-menu {
+.top-menu{
     font-family: $font-secondary;
     display: flex;
     flex-direction: column;
 
-    img {
+    img{
         width: 100%;
         max-height: 300px;
         object-fit: cover;
@@ -14,11 +14,12 @@
         object-position: 50% 40%;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px){
 
         img{
             position: static;
         }
+
         img[alt="la palette du gout"]{
             object-position: 50% 58%;
         }
@@ -37,52 +38,51 @@
     }
    
 
-    &__name {
+    &__name{
         display: flex;
         @include flexcenter;
+        justify-content: space-between;
         align-items: baseline;
         background-color: $restaurants-back-color;
         border-radius: 2em 2em 0 0;
         margin-top: -3em;
+    
 
         @media (min-width: 1024px) {
             width: 90%;
             max-width: 1500px;
             margin: -3em auto 0;
-        }
-
-        
+        }        
     }
 
     h1{
         margin-bottom: 0;
+        padding-left: 4vw;
+        
     }
     
-    .fa-heart{
+    div > .fa-heart{
         font-size: 1.5em;
+        padding-right: 5%;
+        position: relative;
+        
+        @include filling-heart;
     }
-
-
-
-
-
 
 }
 
-.menu {
+.menu{
+    background-color: $restaurants-back-color;
+    position: relative;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px){
         width: 90%;
         max-width: 1500px;
         margin: auto;
         padding: 0;
     }
 
-
-    background-color: $restaurants-back-color;
-    position: relative;
-
-    h2 {
+    h2{
         margin-top: 1em;
         padding-top: 1em;
         font-size: 1em;
@@ -90,17 +90,17 @@
         font-weight: normal;
         text-transform: uppercase;
         position: relative;
+        height: 25px;
     }
 
-    h2::after {
+    h2::after{
         content : "";
         position: absolute;
         left    : 1.1em;
-        bottom: -5px;
+        bottom: 0px;
         left: 0;
         height  : 1px;
         width   : 40px;
         border-bottom: 3px solid $color-tertiary;
-      }
-
+    }
 }

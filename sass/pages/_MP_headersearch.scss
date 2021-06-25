@@ -1,68 +1,60 @@
-.header-loc {
-        background-color: $element-back-color;
-        box-shadow: inset 0px 6px 5px -5px rgba($shadow-color, 0.5) ;
-        text-align: center;
-        padding: 1em 0 0.2em;                
+.header-loc{
+    background-color: rgba($element-back-color, 0.5);
+    box-shadow: inset $box-shadow-top;
+    text-align: center;
+    padding: 1em 0 0.2em;                
         
-    input {
+    input{
         background-color: transparent;
         border: none;
-        width: 12em;
+        width: 12em; 
         
-    }
+        &::placeholder{
+            font-size: 1.3em;
+            opacity: 1;
+            text-align: center;
+        }
 
-    input::placeholder {
-        font-size: 1.3em;
-        opacity: 1;
-        text-align: center;   
-    }
+        &:focus{
+            outline: none; 
+        }
+    }   
 
-    input:focus {
-        outline: none;
-    }
-    
-
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px){
         background-color: white;
         width: 300px;
         border-radius: 2em;
         position: absolute;
-        right: 5em;
         top: 1em;
+        right: 5em;
     }
 }
 
 
-.header-search {
-    background-color: rgba($element-back-color, 0.3);
+.header-search{
+    background-color: $element-back-color;
     padding: 2em 0em;
     text-align: center;
 
-    @media (min-width: 1024px) {
-        box-shadow: inset 0px 6px 5px -5px rgba($shadow-color, 0.5) ;
-
+    @media (min-width: 1024px){
+        box-shadow: inset $box-shadow-top;
     }
 
-
-    
-    h1, p {
+    h1, p{
         margin-top: 0;
     }
 
-    h1 {
+    h1{
         font-size: 1.4em;
         padding: 0% 15%;               
     }
 
-    p {
+    p{
         font-size: 1.1em;
-        font-weight: 100;
-       
+        font-weight: 100;       
     }
 
-    &__button {
+    &__button{
         @include clic-button
     }
-
-
 }
