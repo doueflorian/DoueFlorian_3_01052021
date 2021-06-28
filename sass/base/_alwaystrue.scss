@@ -18,7 +18,13 @@ a {
 body {
     margin: 0;
     padding: 0;
-    font-family: $font-primary;
+    font-family: $font-primary;  display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html, body {
+    overflow-x:hidden;
 }
 
 .loader-anim{
@@ -40,22 +46,14 @@ body {
 
         display: flex;
         @include flexcenter;
-        
-        position: relative;
-    
+        position: relative;    
         background: white;
-        background-clip: padding-box;
-        border: solid -10px transparent;
         border-radius: 100%;
         width: 280px;
-        height: 280px;
-
-        
-
+        height: 280px;     
       
         &:before {
             animation: bordercolor 3s infinite forwards ease-out;
-
             
             content: '';
             width: 300px;
@@ -83,5 +81,12 @@ body {
         -webkit-text-fill-color: transparent; 
         
 
+    }
+}
+
+
+input{
+    &[type=checkbox], &[type=radio]{
+        display: none;
     }
 }

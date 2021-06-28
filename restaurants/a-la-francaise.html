@@ -28,158 +28,177 @@
 
         <img src="../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la francaise" />
 
-        <div class="top-menu__name"> <h1> &#192; la française  </h1>  <i class="far fa-heart"></i> </div>
+            <div class="top-menu__name"> <h1> &#192; la française  </h1>
+                
+                <input name="restaurantlike" type="checkbox" id="likeheart1">
+                <label for="likeheart1" class="top-menu__label">
+                    <i class="far fa-heart top-menu__heart"></i> 
+                </label>
+
+            </div>
 
         </section>
 
         <section class="menu">
-
-
-            <div class="menu-flex">
-
-                <div class="menu__cards">
-
-                    <h2> Entrées </h2>
-
-                    <div class="menu__cards-list menu__cards-list-1">
-                    
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Tartare de poulpe acidulé </h3>
-                                        <p> zestes d'orange </p>
-                                    </div>
-
+            <form  method="post" action="none" >
+    
+                <div class="menu-flex">
+    
+                    <div class="menu__cards">
+    
+                        <h2> Entrées </h2> 
+    
+                        <div class="menu__cards-list menu__cards-list-1">
+    
+                                <input name="entrees" type="radio" id="entrees1">
+                                    <label for="entrees1" class="item__card">
+                                        <span class="item__card-txt">
+                                            <span class="item__card-title"> Tartare de poulpe acidulé </span><br>
+                                            Aux zestes d'orange
+                                        </span>
+    
                                         <span class="item__card-price"> 25€ </span>
-
-                                        <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                
-
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Velouté de légumes d'antan </h3>
-                                        <p> Carotte, panais, topinambour </p>
-                                    </div>
-
+                                        
+                                        <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                        
+                                    </label>                                
+    
+                                    <input name="entrees" type="radio" id="entrees2">
+                                    <label for="entrees2" class="item__card">
+                                        <span class="item__card-txt">
+                                            <span class="item__card-title"> Velouté de légumes d'antan </span><br>
+                                            Carotte, panais, topinambour
+                                        </span>
+    
                                         <span class="item__card-price"> 35€ </span>
-
-                                        <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                 
-
-                            <div class="item__card">
-                                    <div class="item__card-txt">    
-                                        <h3> Soupe à l'oignon </h3>
-                                        <p> Revisitée </p>
-                                    </div>
-
+                                        
+                                        <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                        
+                                    </label>                             
+    
+                                    <input name="entrees" type="radio" id="entrees3">
+                                    <label for="entrees3" class="item__card">
+                                        <span class="item__card-txt">
+                                            <span class="item__card-title"> Soupe à l'oignon </span><br>
+                                            Revisitée
+                                        </span>
+    
                                         <span class="item__card-price"> 20€ </span>
-
-                                        <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>
-
-                    </div>
-
+                                        
+                                        <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                        
+                                    </label>
+    
+                        </div>                       
+    
+                    </div>    
+    
+                    <div class="menu__cards">
+    
+                        <h2> Plats </h2>
+    
+                        <div class="menu__cards-list menu__cards-list-2">
+    
+                            <input name="plats" type="radio" id="plat1">
+                            <label for="plat1" class="item__card">
+                                <span class="item__card-txt">
+                                    <span class="item__card-title"> Coquilles Saint-Jacques </span><br>
+                                    Accompagnées d'une purée de panais
+                                </span>
+    
+                                <span class="item__card-price"> 40€ </span>
+                                
+                                <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                
+                            </label>                             
+    
+                            <input name="plats" type="radio" id="plat2">
+                            <label for="plat2" class="item__card">
+                                <span class="item__card-txt">
+                                    <span class="item__card-title"> Magret de canard </span><br>
+                                    Et parmentier de pommes de terre
+                                </span>
+    
+                                <span class="item__card-price"> 35€ </span>
+                                
+                                <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                
+                            </label>                                 
+    
+                            <input name="plats" type="radio" id="plat3">
+                            <label for="plat3" class="item__card">
+                                <span class="item__card-txt">
+                                    <span class="item__card-title"> Pigeonneau d’Ille-et-Vilaine </span><br>
+                                    Sur son lit de gnocchis aux légumes
+                                </span>
+    
+                                <span class="item__card-price"> 44€ </span>
+                                
+                                <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                
+                            </label>    
+    
+                        </div>
+    
+                    </div>             
+                
+                    <div class="menu__cards">
+    
+                        <h2> Desserts </h2>
+    
+                        <div class="menu__cards-list menu__cards-list-3">
+    
+                            <input name="desserts" type="radio" id="dessert1">
+                            <label for="dessert1" class="item__card">
+                                <span class="item__card-txt">
+                                    <span class="item__card-title"> Pétales de violettes glacés </span><br>
+                                    Et purée de noisettes
+                                </span>
+    
+                                <span class="item__card-price"> 18€ </span>
+                                
+                                <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                
+                            </label>                                
+    
+                            <input name="desserts" type="radio" id="dessert2">
+                            <label for="dessert2" class="item__card">
+                                <span class="item__card-txt">
+                                    <span class="item__card-title"> Fondant au chocolat </span><br>
+                                    Revisité
+                                </span>
+    
+                                <span class="item__card-price"> 22€ </span>
+                                
+                                <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                
+                            </label>                              
+    
+                            <input name="desserts" type="radio" id="dessert3">
+                            <label for="dessert3" class="item__card">
+                                <span class="item__card-txt">
+                                    <span class="item__card-title"> Millefeuille croustillant  </span><br>
+                                    Myrtilles et pâte d’amande
+                                </span>
+    
+                                <span class="item__card-price"> 23€ </span>
+                                
+                                <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                
+                            </label>   
+    
+                        </div>
+    
+                    </div>     
+                
                 </div>    
-
-                <div class="menu__cards">
-
-                    <h2> Plats </h2>
-
-                    <div class="menu__cards-list menu__cards-list-2">
-                    
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Coquilles Saint-Jacques </h3>
-                                        <p> Accompagnées d'une purée de panais </p>
-                                    </div>
-
-                                        <span class="item__card-price"> 40€ </span>
-
-                                        <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                
-
-                        <div class="item__card">
-                            <div class="item__card-txt">
-                                    <h3> Magret de canard </h3>
-                                    <p> Et parmentier de pommes de terre </p>
-                            </div>
-
-                                    <span class="item__card-price"> 35€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                 
-
-                            <div class="item__card">
-                                <div class="item__card-txt">
-                                    <h3> Pigeonneau d’Ille-et-Vilaine </h3>
-                                    <p> Sur son lit de gnocchis aux légumes </p>
-                                </div>
-
-                                    <span class="item__card-price"> 44€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>
-
-                    </div>
-
-                </div>             
-            
-                <div class="menu__cards">
-
-                    <h2> Desserts </h2>
-
-                    <div class="menu__cards-list menu__cards-list-3">
-                    
-                            <div class="item__card">
-                                <div class="item__card-txt">
-                                    <h3> Pétales de violettes glacés </h3>
-                                    <p> Et purée de noisettes </p>
-                                </div>
-                                    <span class="item__card-price"> 18€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                
-
-                            <div class="item__card">
-                                <div class="item__card-txt">
-                                    <h3> Fondant au chocolat </h3>
-                                    <p> Revisité </p>
-                                </div>
-
-                                    <span class="item__card-price"> 22€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                 
-
-                            <div class="item__card">
-                                <div class="item__card-txt">
-                                    <h3> Millefeuille croustillant </h3>
-                                    <p> Myrtilles et pâte d’amande </p>
-                                </div>
-
-                                    <span class="item__card-price"> 23€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>
-
-                    </div>
-
-                </div>     
-            </div>    
-
-            <div class="menu__order">
-                <button class="menu__order-button" disabled> Commander </button>
-            </div>
-
-        </section>
+    
+                <div class="menu__order">
+                    <button class="menu__order-button" disabled> Commander </button>
+                </div>
+    
+            </form>
+            </section>
 
 
 

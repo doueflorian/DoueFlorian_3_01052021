@@ -50,9 +50,9 @@
 
         @media (min-width: 1024px) {
             width: 90%;
-            max-width: 1500px;
             margin: -3em auto 0;
-        }        
+        }      
+          
     }
 
     h1{
@@ -60,33 +60,42 @@
         padding-left: 4vw;
         
     }
+
+    &__label{
+        padding-right: 5%;
+        position: relative;
+    }
     
-    div > .fa-heart{
+    &__heart{
         font-size: 1.5em;
         padding-right: 5%;
         position: relative;
-        
+
         @include filling-heart;
     }
 
 }
 
+input[name=restaurantlike]:checked + label .place-card__heart{
+    @include filled-heart;             
+}
+
 .menu{
     background-color: $restaurants-back-color;
     position: relative;
+    flex: 1;
 
     @media (min-width: 1024px){
         width: 90%;
-        max-width: 1500px;
         margin: auto;
         padding: 0;
     }
 
     h2{
         margin-top: 1em;
+        margin-bottom: 0;
         padding-top: 1em;
         font-size: 1em;
-        font-weight: 100;
         font-weight: normal;
         text-transform: uppercase;
         position: relative;

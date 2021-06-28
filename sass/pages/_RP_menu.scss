@@ -15,8 +15,10 @@
         width: 100%;
         
         @media (min-width: 1024px) {
-            flex: 0 0 30%;
+            flex: 1 0 30%;
+            max-width: 48%;
         }      
+
     }
 
 
@@ -54,27 +56,38 @@
 
 .item__card{
     @include menu-button;
+    user-select: none;    
+    cursor: pointer;
+
+    @media (min-width: 1921px) {
+        height: 10vh;
+    }   
+    
 
     &-txt{
         line-height: 1.5em;
         flex: 0 1 100%;
-        align-self: center;
         padding-left: 1em;
-        overflow: hidden;       
-    }
-    
-    &-txt h3, &-txt p{
-        padding: 0;
-        margin: 0;
-        font-size: 1em;  
+        overflow: hidden;
+        align-self: center;
+ 
+        font-size: 1rem;  
         white-space: nowrap;
         overflow: hidden; 
-        text-overflow: ellipsis;         
+        text-overflow: ellipsis;  
+
+ 
+    }
+
+    &-title{
+        font-weight: bold;
     }
 
     &-price{
         font-weight: bold;
         padding: 0 1em 0.5em; 
+        user-select: none; 
+
     }
 
     &-check{
@@ -83,32 +96,33 @@
         color: white;
         border-radius: 0 1em 1em 0 ;
         border: none;
-        background-color: $color-tertiary;    
-    }
+        height: 100%;
+        background-color: $color-tertiary;   
+        padding: 0; 
+        display: flex;
+        @include flexcenter;
 
-    &:hover{
-    
-        .item__card-check{
-        flex: 1 0 15%;
-        max-width: 60px;
-        transform: translateX(0.2px);
+        .fa-check-circle{
+            font-size: 1.2em;
+            transition: all 0.5s;
         }
-
-        i{
-            transform: rotate(1turn);
-        }
-        
     }
 
-    &-check i{
-        font-size: 1.5em;
-        transition: all 0.5s;
-    }
-
-    span{
+    &-price{
         align-self: flex-end;
-    }
+    } 
 
+}
 
+input[type=radio]:hover + label .item__card-check, input[type=radio]:checked + label .item__card-check{
+    flex: 1 0 15%;
+    max-width: 60px;
+    transform: translateX(0.2px);
+    transition-duration: 0.5s;
+}
+
+input[type=radio]:hover + label .fa-check-circle, input[type=radio]:checked + label .fa-check-circle {
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
 
 }

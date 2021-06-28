@@ -2,7 +2,7 @@
     background-color: rgba($element-back-color, 0.5);
     box-shadow: inset $box-shadow-top;
     text-align: center;
-    padding: 1em 0 0.2em;                
+    padding: 1em 0 ;         
         
     input{
         background-color: transparent;
@@ -55,6 +55,7 @@
     }
 
     &__button{
-        @include clic-button
+        @include clic-button;
+        margin: 1em 0 2em;
     }
 }

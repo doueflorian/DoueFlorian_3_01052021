@@ -28,11 +28,19 @@
 
             <img src="../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du gout"/>
 
-            <div class="top-menu__name"> <h1> La palette du goût  </h1>  <i class="far fa-heart"></i> </div>
+            <div class="top-menu__name"> <h1> La palette du goût  </h1>
+                
+                <input name="restaurantlike" type="checkbox" id="likeheart1">
+                    <label for="likeheart1" class="top-menu__label">
+                        <i class="far fa-heart top-menu__heart"></i> 
+                    </label>
+                    
+            </div>
 
         </section>
 
         <section class="menu">
+        <form  method="post" action="none" >
 
             <div class="menu-flex">
 
@@ -42,41 +50,44 @@
 
                     <div class="menu__cards-list menu__cards-list-1">
 
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Fricassée d'escargot </h3>
-                                        <p> Au piment d'Espelette  </p>
-                                    </div>
+                            <input name="entrees" type="radio" id="entrees1">
+                                <label for="entrees1" class="item__card">
+                                    <span class="item__card-txt">
+                                        <span class="item__card-title"> Fricassée d'escargot </span><br>
+                                        Au piment d'Espelette
+                                    </span>
 
                                     <span class="item__card-price"> 25€ </span>
                                     
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
+                                    <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
                                     
-                            </div>                                
+                                </label>                                
 
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Foie gras de canard mi-cuit </h3>
-                                        <p> Et ses copeaux de truffe noire </p>
-                                    </div>
+                                <input name="entrees" type="radio" id="entrees2">
+                                <label for="entrees2" class="item__card">
+                                    <span class="item__card-txt">
+                                        <span class="item__card-title"> Foie gras de canard mi-cuit </span><br>
+                                        Et ses copeaux de truffe noire
+                                    </span>
 
                                     <span class="item__card-price"> 35€ </span>
+                                    
+                                    <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                    
+                                </label>                             
 
-                                    <button disabled class="item__card-check" > <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                 
-
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                       <h3> Oeuf au plat </h3>
-                                       <p> Assaisonné à la truffe sur lit de caviar </p>
-                                    </div>
+                                <input name="entrees" type="radio" id="entrees3">
+                                <label for="entrees3" class="item__card">
+                                    <span class="item__card-txt">
+                                        <span class="item__card-title"> Oeuf au plat </span><br>
+                                        Assaisonné à la truffe sur lit de caviar
+                                    </span>
 
                                     <span class="item__card-price"> 20€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>
+                                    
+                                    <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                                    
+                                </label>
 
                     </div>                       
 
@@ -88,41 +99,44 @@
 
                     <div class="menu__cards-list menu__cards-list-2">
 
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Filet de boeuf aux herbes </h3>
-                                        <p> Accompagné de sa ribambelle de légumes </p>
-                                    </div>
+                        <input name="plats" type="radio" id="plat1">
+                        <label for="plat1" class="item__card">
+                            <span class="item__card-txt">
+                                <span class="item__card-title"> Filet de boeuf aux herbes </span><br>
+                                Accompagné de sa ribambelle de légumes
+                            </span>
 
-                                    <span class="item__card-price"> 40€ </span>
+                            <span class="item__card-price"> 40€ </span>
+                            
+                            <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                            
+                        </label>                             
 
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
+                        <input name="plats" type="radio" id="plat2">
+                        <label for="plat2" class="item__card">
+                            <span class="item__card-txt">
+                                <span class="item__card-title"> Parmentier de queue de boeuf </span><br>
+                                À la truffe noire sur sa purée de panais
+                            </span>
 
-                            </div>                                
+                            <span class="item__card-price"> 35€ </span>
+                            
+                            <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                            
+                        </label>                                 
 
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Parmentier de queue de boeuf </h3>
-                                        <p> À la truffe noire sur sa purée de panais </p>
-                                    </div>
+                        <input name="plats" type="radio" id="plat3">
+                        <label for="plat3" class="item__card">
+                            <span class="item__card-txt">
+                                <span class="item__card-title"> Filet de turbot </span><br>
+                                Aux agrumes
+                            </span>
 
-                                    <span class="item__card-price"> 35€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                 
-
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Filet de turbot </h3>
-                                        <p> Aux agrumes </p>
-                                    </div>
-
-                                    <span class="item__card-price"> 44€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>
+                            <span class="item__card-price"> 44€ </span>
+                            
+                            <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                            
+                        </label>    
 
                     </div>
 
@@ -134,41 +148,44 @@
 
                     <div class="menu__cards-list menu__cards-list-3">
 
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Paris-Brest </h3>
-                                        <p> Revisité </p>
-                                    </div>
+                        <input name="desserts" type="radio" id="dessert1">
+                        <label for="dessert1" class="item__card">
+                            <span class="item__card-txt">
+                                <span class="item__card-title"> Paris-Brest </span><br>
+                                Revisité
+                            </span>
 
-                                    <span class="item__card-price"> 18€ </span>
+                            <span class="item__card-price"> 18€ </span>
+                            
+                            <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                            
+                        </label>                                
 
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
+                        <input name="desserts" type="radio" id="dessert2">
+                        <label for="dessert2" class="item__card">
+                            <span class="item__card-txt">
+                                <span class="item__card-title"> Macaron au chocolat d'exception </span><br>
+                                Et glace à la vanille de Madagascar
+                            </span>
 
-                            </div>                                
+                            <span class="item__card-price"> 22€ </span>
+                            
+                            <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                            
+                        </label>                              
 
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Macaron au chocolat d'exception </h3>
-                                        <p> Et glace à la vanille de Madagascar </p>
-                                    </div>
+                        <input name="desserts" type="radio" id="dessert3">
+                        <label for="dessert3" class="item__card">
+                            <span class="item__card-txt">
+                                <span class="item__card-title"> Mousse au chocolat  </span><br>
+                                Au piment d'Espelette et à la truffe noire
+                            </span>
 
-                                    <span class="item__card-price"> 22€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>                                 
-
-                            <div class="item__card">
-                                    <div class="item__card-txt">
-                                        <h3> Mousse au chocolat </h3>
-                                        <p> Au piment d'Espelette et à la truffe noire </p>
-                                    </div>
-
-                                    <span class="item__card-price"> 23€ </span>
-
-                                    <button disabled class="item__card-check"> <i class="fas fa-check-circle"></i> </button>
-
-                            </div>
+                            <span class="item__card-price"> 23€ </span>
+                            
+                            <span class="item__card-check"> <i class="fas fa-check-circle"></i> </span>
+                            
+                        </label>   
 
                     </div>
 
@@ -180,6 +197,7 @@
                 <button class="menu__order-button" disabled> Commander </button>
             </div>
 
+        </form>
         </section>
 
 
