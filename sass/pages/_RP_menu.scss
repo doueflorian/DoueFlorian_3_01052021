@@ -58,11 +58,7 @@
     @include menu-button;
     user-select: none;    
     cursor: pointer;
-
-    @media (min-width: 1921px) {
-        height: 10vh;
-    }   
-    
+   
 
     &-txt{
         line-height: 1.5em;

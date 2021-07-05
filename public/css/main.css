@@ -538,12 +538,14 @@ input[type=checkbox], input[type=radio] {
   -webkit-text-stroke: 1px #f6f6f6;
 }
 
-.place-card__heart:hover::after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+@media (min-width: 769px) {
+  .place-card__heart:hover::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .place-card__heart::after {
@@ -667,12 +669,14 @@ input[name=restaurantlike]:checked + label .top-menu__heart {
   -webkit-text-stroke: 1px #f6f6f6;
 }
 
-.top-menu__heart:hover::after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+@media (min-width: 769px) {
+  .top-menu__heart:hover::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .top-menu__heart::after {
@@ -889,12 +893,6 @@ input[name=restaurantlike]:checked + label .place-card__heart {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-}
-
-@media (min-width: 1921px) {
-  .item__card {
-    height: 10vh;
-  }
 }
 
 .item__card-txt {
